@@ -1,4 +1,4 @@
-<?php include "include/header.php" ;
+<?php include "../include/header.php" ;
 include 'verif_login.php';?>
 <fieldset style="width:270px">
 <legend>Contact details</legend> 

@@ -9,7 +9,7 @@
         
 
 <?php
-include_once 'config.php';
+include_once '../include/config.php';
 
 if (isset($_GET['tweets_id'])) {
     $user_id = $_SESSION['id'];
@@ -52,7 +52,7 @@ if (isset($_GET['tweets_id'])) {
 }
 
 // Rediriger l'utilisateur vers la page précédente ou une autre page
- header("Location: index.php");
+ header("Location: ../base/index.php");
 exit();
 ?>
 </body>

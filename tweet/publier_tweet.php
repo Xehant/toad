@@ -1,5 +1,5 @@
 <?php
-include_once 'config.php';
+include_once '../include/config.php';
 
 if (isset($_POST['tweet_text'])) {
     // Récupérer l'ID de l'utilisateur connecté
@@ -29,7 +29,7 @@ if (isset($_POST['tweet_text'])) {
 
         if ($stmt->execute()) {
             // Rediriger l'utilisateur vers la page d'accueil ou une autre page après la publication du tweet
-            header("Location: index.php");
+            header("Location: ../base/index.php");
             exit();
         } else {
             echo "Une erreur est survenue lors de la publication du tweet.";

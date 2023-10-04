@@ -1,6 +1,6 @@
 <?php
 // Assurez-vous d'appeler session_start() au début du fichier
-include_once 'config.php';
+include_once '../include/config.php';
 
 if(isset($_SESSION["id"])){
    $id = $_SESSION["id"];
@@ -14,7 +14,7 @@ if(isset($_SESSION["id"])){
       $nom = $result['nom'];
    }
 }
-include "include/header.php";
+include "../include/header.php";
 //var_dump($_SESSION);
 ?>
 

@@ -1,6 +1,6 @@
 <?php
 // Inclure la configuration de la base de données
-include_once 'config.php';
+include_once 'include/config.php';
 
 // Requête pour récupérer les tweets avec les informations de l'utilisateur
 $query = "SELECT t.*, u.nom AS nom_utilisateur FROM Tweets AS t

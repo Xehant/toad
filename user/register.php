@@ -1,6 +1,6 @@
 <?php 
-include 'include/header.php';
-include_once 'config.php';
+include '../include/header.php';
+include_once '../include/config.php';
 include 'action.php';
 if(isset($_GET["p"])){
 $cle = $_GET["p"];
