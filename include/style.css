@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+header div{
+    background-color: green;
+    color:white;
+    height: 150px;
+    margin-top: -20px;
+}
+header ul{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+img{
+    float: left;
+    max-width: 100px;
+}
+fieldset{
+    
+    margin: auto;
+    border: 1px solid green;
+    border-radius: 30;
+    max-width: 500px;
+    padding: 2em;
+    font-size: 1em;
+    
+}
+.form-group{
+    padding: 1em;
+}
+.tweet{
+    border: 1px solid black;
+justify-content: center;
+max-width: 700px;
+display: block;
+margin:1em;
+}
+.tweet img{
+    max-width: 100px;
+}
