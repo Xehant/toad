@@ -28,15 +28,16 @@ if (isset($_POST['tweet_text'])) {
         $stmt->bindParam(':user_photo', $user_photo);
 
         if ($stmt->execute()) {
+           
             // Rediriger l'utilisateur vers la page d'accueil ou une autre page après la publication du tweet
             header("Location: ../base/index.php");
             exit();
         } else {
             echo "Une erreur est survenue lors de la publication du tweet.";
-        }
+        }include '../tweet/comments.php';
     } else {
         echo "Utilisateur introuvable.";
     }
 }
-
+ 
 ?>
