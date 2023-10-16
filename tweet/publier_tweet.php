@@ -39,5 +39,5 @@ if (isset($_POST['tweet_text'])) {
         echo "Utilisateur introuvable.";
     }
 }
- 
+var_dump($_GET['tweet_id']);
 ?>

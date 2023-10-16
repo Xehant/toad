@@ -30,13 +30,15 @@ fieldset{
 .form-group{
     padding: 1em;
 }
-.tweet{
+.tweet {
     background-color: #f5f5f5;
     border: 1px solid #e1e8ed;
     border-radius: 8px;
     padding: 10px;
-    margin: 10px;
-    width: 400px;
+    margin: 1em;
+    max-width: 400px; /* Pour limiter la largeur */
+    margin: 0 auto; /* Pour centrer horizontalement */
+    text-align: center; /* Pour centrer le contenu */
 }
 .tweet strong{
     font-weight: bold;
@@ -52,4 +54,19 @@ fieldset{
 .tweet .timestamp {
     color: #657786;
     font-size: 12px;
+}
+.rating{
+    display: inline-flex;
+    justify-content: space-around;
+}
+.comment{
+    margin: 1em;
+    border-bottom: 1px #657786;
+}
+.tweet_text{
+    text-decoration: none;
+    color: black;
+}
+.publication {
+    text-align: center;
 }
