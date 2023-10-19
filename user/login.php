@@ -1,7 +1,7 @@
 <?php include "../include/header.php" ;
-include 'verif_login.php';?>
-<fieldset style="width:270px">
-<legend>Contact details</legend> 
+include '../user/verif_login.php';?>
+<fieldset>
+<h2>Connexion</h2> 
 
 <form action="" method="post">
 <div class="from-group">
@@ -16,7 +16,7 @@ include 'verif_login.php';?>
         </div>
 
         <div class=from-group>
-          <button type="submit" name="logger">Se connecter</button>
+          <input type="submit" class="submit" name="logger"value="Se connecter"></input>
         </div>
 </form>
 </fieldset>

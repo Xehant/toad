@@ -38,6 +38,8 @@ if (isset($_POST['tweet_text'])) {
     } else {
         echo "Utilisateur introuvable.";
     }
+}else{
+    header("Location:../base/index.php");
 }
-var_dump($_GET['tweet_id']);
+
 ?>

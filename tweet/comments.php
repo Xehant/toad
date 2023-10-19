@@ -3,6 +3,6 @@
 ?>
 <form action="../tweet/reponse_tweet.php" method="post">
     <input type="hidden" name="tweets_id" value="<?php echo $row['ID']; ?>">
-    <textarea name="reponse_tweet" placeholder="Écrivez votre réponse ici" rows="4" cols="50"></textarea>
-    <input type="submit" value="Publier">
+    <input type="text" name="reponse_tweet" placeholder="Écrivez votre réponse ici" rows="4" cols="50"></input>
+    <input type="submit" class="submit" value="Publier">
 </form>

@@ -27,16 +27,14 @@ include "../include/header.php";
   <form action="upload.php" method="post" enctype="multipart/form-data">
         Select image to upload:
         <input type="file" name="image"/>
-        <input type="submit" name="submit" value="UPLOAD"/>
+        <input type="submit" name="submit" value="UPLOAD" class="submit"/>
     </form>
 <form action="logout" method="get">
    <a href="logout.php">Se déconnecter</a>
 </form>
    <div class="card-body">
-      <h2>Lien de parrainage</h2>
-      <p class="card-text">
-         <b>http://localhost/toad/register.php?p=<?php echo($id) ; ?></b>
-      </p>
+    
+         
       <p><a href="" class="btn btn-primary">Je partage mon lien via Facebook</a></p>
       <p><a href="" class="btn btn-danger">Je partage mon lien via Google</a></p>
    </div>

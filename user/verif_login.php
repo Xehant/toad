@@ -13,16 +13,17 @@ if(isset($_POST["logger"])){
             if (password_verify($mdp, $result['mdp'])) {
                 // Mot de passe correct, l'utilisateur est connecté
                 $_SESSION["id"] = $result["id"];
-                header("Location: espace.php");
+                header("Location: ../user/espace.php");
                 exit(); // Arrête l'exécution du script après la redirection
             } else {
-                echo '<div class="alert alert-danger">Le mot de passe ou l\'email est incorrect</div>';
+                echo '<h2 class="alert alert-danger">Le mot de passe ou l\'email est incorrect</h2>';
             }
         } else {
-            echo '<div class="alert alert-danger">Le mot de passe ou l\'email est incorrect</div>';
+            echo '<h2 class="alert alert-danger">Le mot de passe ou l\'email est incorrect</h2>';
         }
     } else {
-        echo '<div class="alert alert-danger">Le mot de passe ou l\'email est incorrect</div>';
+        echo '<h2 class="alert alert-danger">Le mot de passe ou l\'email est incorrect</h2>';
     }
 }
+
 ?>

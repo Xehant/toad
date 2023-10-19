@@ -12,6 +12,9 @@ header ul{
     text-decoration: none;
     display: flex;
     justify-content: space-between;
+    color: white;
+    font-size: 1em;
+    
 }
 img{
     float: left;
@@ -19,42 +22,146 @@ img{
 }
 fieldset{
     
-    margin: auto;
+    margin-top: 2em;
     border: 1px solid green;
-    border-radius: 30;
-    max-width: 500px;
-    padding: 2em;
+border-radius: 10%;
+    max-width: 300px;
+    padding: 3em;
     font-size: 1em;
-    
+    color:white;
+    background-color: green;
+    text-align: center;
+}
+fieldset label, fieldset input{
+    margin: auto;
+    font-size: 2em;
+    color:white;
+    background-color: green;
+   
+}
+fieldset .submit:hover{
+    background-color: white;
+    color: green;
+    border: none;
+}
+fieldset h2{
+font-size: 2em;
+color: white;
 }
 .form-group{
     padding: 1em;
+    margin:top 0.5em;
 }
-.tweet {
-    background-color: #f5f5f5;
-    border: 1px solid #e1e8ed;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 1em;
-    max-width: 400px; /* Pour limiter la largeur */
-    margin: 0 auto; /* Pour centrer horizontalement */
-    text-align: center; /* Pour centrer le contenu */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+header div{
+    background-color: green;
+    color:white;
+    height: 150px;
+    margin-top: -20px;
 }
-.tweet strong{
-    font-weight: bold;
+header ul{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 1em;
+    
 }
-.tweet img{
+img{
+    float: left;
     max-width: 100px;
 }
-.tweet p{
-    margin-top: 5px;
-    margin-left: 5px;
-    justify-content: flex-end;
+fieldset{
+    
+    margin-top: 2em;
+    border: 1px solid green;
+border-radius: 10%;
+    max-width: 300px;
+    padding: 3em;
+    font-size: 1em;
+    color:white;
+    background-color: green;
+    text-align: center;
 }
+fieldset label, fieldset input{
+    margin: auto;
+    font-size: 2em;
+    color:white;
+    background-color: green;
+   
+}
+fieldset .submit:hover{
+    background-color: white;
+    color: green;
+    border: none;
+}
+fieldset h2{
+font-size: 2em;
+color: white;
+}
+.form-group{
+    padding: 1em;
+    margin:top 0.5em;
+}
+/* Style général pour les tweets */
+.tweet {
+    background-color: white;
+    border: 1px solid #e1e8ed;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    max-width: 600px; /* Ajustez selon vos préférences */
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Style pour le nom de l'utilisateur */
+.tweet strong {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333; /* Couleur du texte du nom */
+}
+
+/* Style pour le texte du tweet */
+.tweet .tweet_text {
+    font-size: 16px;
+    color: #333; /* Couleur du texte du tweet */
+}
+
+/* Style pour la photo de profil de l'utilisateur */
+.tweet img {
+    max-width: 80px;
+    border-radius: 50%;
+}
+
+/* Style pour la date de publication */
 .tweet .timestamp {
     color: #657786;
     font-size: 12px;
 }
+
+/* Style pour les icônes de notation (likes, retweets, etc.) */
+.tweet .rating {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+/* Style pour le lien "Voir les détails" */
+.tweet a {
+    color: #1DA1F2; /* Couleur du lien */
+    text-decoration: none;
+}
+
+/* Style au survol du lien "Voir les détails" */
+.tweet a:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
 .rating{
     display: inline-flex;
     justify-content: space-around;
@@ -63,10 +170,125 @@ fieldset{
     margin: 1em;
     border-bottom: 1px #657786;
 }
-.tweet_text{
-    text-decoration: none;
-    color: black;
-}
+
 .publication {
     text-align: center;
 }
+.login-popup{
+    display: none;
+}
+.log{
+    color: white;
+    text-decoration: none;
+}
+ul.menu li {
+    color: white;         /* Couleur du texte */
+    list-style-type: none; /* Supprimer le point */
+    text-decoration: none; /* Supprimer le soulignement */
+    font-size: 1em;        /* Taille du texte */
+    display: block;   
+}
+.publication{
+    display: inline-block;
+    margin-top:1em ;
+    align-items: center;
+}
+.publication .validation{
+    padding: 1em;
+    color: green;
+}
+ .submit{
+    margin: auto;
+    font-size: 2em;   
+    background-color: white;
+    color: green;
+    border: none;
+   
+}
+.submit:hover{
+ color:white;
+    background-color: green;
+    border: none;
+}
+/* Styles généraux pour les champs de saisie */
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid green; /* Couleur verte */
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-shadow: none;
+    transition: border-color 0.3s;
+}
+
+/* Style au survol */
+input[type="text"]:hover {
+    border-color: green; /* Couleur verte légèrement plus foncée au survol */
+}
+
+/* Style au focus (lorsqu'il est cliqué) */
+input[type="text"]:focus {
+    outline: none;
+    border-color: green;
+    box-shadow: 0 0 5px rgba(68, 175, 73, 0.5); /* Ombre légère */
+}
+
+/* Style pour les champs en erreur */
+input[type="text"].error {
+    border-color: #FF5722; /* Couleur orange pour les erreurs */
+}
+
+/* Style pour les champs valides */
+input[type="text"].valid {
+    border-color: green; /* Couleur verte pour les champs valides */
+}
+
+.rating{
+    display: inline-flex;
+    justify-content: space-around;
+}
+.comment{
+    margin: 1em;
+    border-bottom: 1px #657786;
+}
+
+.publication {
+    text-align: center;
+}
+.login-popup{
+    display: none;
+}
+.log{
+    color: white;
+    text-decoration: none;
+}
+ul.menu li {
+    color: white;         /* Couleur du texte */
+    list-style-type: none; /* Supprimer le point */
+    text-decoration: none; /* Supprimer le soulignement */
+    font-size: 1em;        /* Taille du texte */
+    display: block;   
+}
+.publication{
+    display: inline-block;
+    margin-top:1em ;
+    align-items: center;
+}
+.publication .validation{
+    padding: 1em;
+    color: green;
+}
+ .submit{
+    margin: auto;
+    font-size: 2em;   
+    background-color: white;
+    color: green;
+    border: none;
+   
+}
+.submit:hover{
+ color:white;
+    background-color: green;
+    border: none;
+}
+/* Styles généraux pour les champs de saisie */
