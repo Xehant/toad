@@ -1,4 +1,10 @@
 body {
     background-color: #111;
     color: #fff;
+    border-color: green;
+}
+.tweet {
+    background-color: #111;
+    color: #fff;
+    border-color: green;
 }

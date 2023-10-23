@@ -2,8 +2,6 @@
 <?php include '../include/header.php'; ?>
 
 <div class="container">
-
-
     <!-- Formulaire pour publier un tweet -->
     <form action="../tweet/publier_tweet.php" method="post" class="publication">
         <input type="text" name="tweet_text" placeholder="Écrivez votre tweet ici" rows="4" cols="50"></input>

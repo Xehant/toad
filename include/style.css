@@ -2,20 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
   }
-header div{
-    background-color: green;
-    color:white;
-    height: 150px;
-    margin-top: -20px;
-}
-header ul{
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    font-size: 1em;
-    
-}
+
+
 img{
     float: left;
     max-width: 100px;
@@ -109,11 +97,11 @@ color: white;
 /* Style général pour les tweets */
 .tweet {
     background-color: white;
-    border: 1px solid #e1e8ed;
+    border: 1px solid green;
     border-radius: 10px;
     padding: 15px;
-    margin: 15px 0;
-    max-width: 600px; /* Ajustez selon vos préférences */
+    margin: 15px;
+    max-width: 400px; /* Ajustez selon vos préférences */
     margin: 0 auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
@@ -270,7 +258,7 @@ ul.menu li {
     display: block;   
 }
 .publication{
-    display: inline-block;
+
     margin-top:1em ;
     align-items: center;
 }
@@ -291,4 +279,43 @@ ul.menu li {
     background-color: green;
     border: none;
 }
-/* Styles généraux pour les champs de saisie */
+/* Style pour la barre latérale (aside) */
+aside {
+    width: 275px;
+    background-color: green;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aside-links a {
+    color: white;
+    padding: 20px; /* Espacement interne */
+    font-size: 30px;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Espacement vertical entre les liens */
+    line-height: 3; /* Espacement entre les lignes de texte */
+   
+}
+
+.aside-links a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.aside-links a:hover:not(.active) {
+    background-color: white;
+    color: green;
+}
+
+
+  .container {
+    display: flex; /* Utilisez un modèle de boîte flexible pour disposer les éléments horizontalement */
+    flex-direction: column; /* Alignez les éléments de haut en bas (verticalement) */
+    align-items: center; /* Centrez les éléments horizontalement dans la div */
+}
