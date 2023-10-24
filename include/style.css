@@ -4,10 +4,7 @@ body {
   }
 
 
-img{
-    float: left;
-    max-width: 100px;
-}
+
 fieldset{
     
     margin-top: 2em;
@@ -121,10 +118,7 @@ color: white;
 }
 
 /* Style pour la photo de profil de l'utilisateur */
-.tweet img {
-    max-width: 80px;
-    border-radius: 50%;
-}
+
 
 /* Style pour la date de publication */
 .tweet .timestamp {
@@ -318,4 +312,12 @@ aside {
     display: flex; /* Utilisez un modèle de boîte flexible pour disposer les éléments horizontalement */
     flex-direction: column; /* Alignez les éléments de haut en bas (verticalement) */
     align-items: center; /* Centrez les éléments horizontalement dans la div */
+}
+.image-tweet {
+    /* Définissez la largeur et la hauteur maximales pour l'image du tweet */
+    max-width: 100%; /* Pour s'assurer que l'image n'est pas plus large que son contenant */
+    max-height: auto; /* Conservez le ratio hauteur/largeur de l'image */
+}
+.profil img{
+    border-radius:50% ;
 }

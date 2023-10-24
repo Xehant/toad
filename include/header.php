@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../include/style.css">
+    <link rel="stylesheet" href="../include/fontawesome-free-6.4.2-web/css">
     <link id="night-mode-stylesheet" rel="stylesheet" href="../include/night-mode.css" disabled>
 
     <title>Document</title>
@@ -18,16 +19,16 @@
         <ul class="menu">
             <!-- Liens de navigation dans la barre latérale -->
           
-            <li><a href="../base/index.php"><i class="fa-regular fa-house" style="color: #2c511f;"></i>Accueil</a></li>
+            <li><a href="../base/index.php"><i class="fa-light fa-house"></i>Accueil</a></li>
             <li><a href="../user/login.php">Connexion</a></li>
             <li><a href="../user/register.php">Inscription</a></li>
-            <li><a id="night-mode-toggle"><i class="fa-light fa-cloud-moon" style="color: #20511f;"></i>Activer le mode nuit</a></li>
+            <li><a id="night-mode-toggle"><i class="fa-light fa-cloud-moon" style="color: #20511f;"></i>Mode nuit</a></li>
             </ul> 
        </div><a href="../user/espace.php">
         <?php if (isset($_SESSION["id"])){
             include '../user/view.php'?></a>
        <?php }else  {?>
-            <a href="../user/login.php"><img src="../image/default.jpg" alt=""></a> <?php
+            <a href="../user/login.php"><img src="../image/default.jpg" alt="" class="profil"></a> <?php
         }
         ?>
     </aside>
