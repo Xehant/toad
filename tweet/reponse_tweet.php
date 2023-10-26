@@ -23,13 +23,30 @@ if (isset($_POST['tweets_id'], $_POST['reponse_tweet'])) {
         $user_nom = $userInfo['nom'];
         $user_photo = $userInfo['photo'];
 
+        $c_image = null;
+
+        if (!empty($_FILES['reponse_image']['tmp_name'])) {
+            // Vérifiez le type MIME de l'image
+            $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+            $imageInfo = getimagesize($_FILES['reponse_image']['tmp_name']); // Utilisez le bon nom de champ 'reponse_image'
+
+            if (in_array($imageInfo['mime'], $allowedTypes)) {
+                // Conversion de l'image en format binaire
+                $c_image = file_get_contents($_FILES['reponse_image']['tmp_name']); // Utilisez le bon nom de champ 'reponse_image'
+            } else {
+                echo "Le type de fichier n'est pas autorisé. Seuls les fichiers JPEG, PNG ou GIF sont acceptés.";
+                exit();
+            }
+        } 
+
         // Insérer le commentaire dans la base de données avec les informations de l'utilisateur
-        $query = "INSERT INTO Comments (Tweets_ID, User_ID, User_nom, User_photo, Comment_text, created_at) VALUES (:tweet_id, :user_id, :user_nom, :user_photo, :reponse_tweet, NOW())";
+        $query = "INSERT INTO Comments (Tweets_ID, User_ID, User_nom, User_photo, Comment_text, c_image, created_at) VALUES (:tweet_id, :user_id, :user_nom, :user_photo, :reponse_tweet, :c_image, NOW())";
         $stmt = $db->prepare($query);
         $stmt->bindParam(':tweet_id', $tweet_id);
         $stmt->bindParam(':user_id', $user_id);
         $stmt->bindParam(':user_nom', $user_nom, PDO::PARAM_STR, 20);
         $stmt->bindParam(':user_photo', $user_photo, PDO::PARAM_LOB);
+        $stmt->bindParam(':c_image', $c_image, PDO::PARAM_LOB);
         $stmt->bindParam(':reponse_tweet', $reponse_tweet);
 
         if ($stmt->execute()) {

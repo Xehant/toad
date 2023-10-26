@@ -6,7 +6,7 @@ if (isset($_SESSION["id"])) {
 
     if (!empty($id)) {
         // Récupérer les données de l'image depuis la base de données
-        $stmt = $db->prepare("SELECT comment_image FROM Comments WHERE ID = :id");
+        $stmt = $db->prepare("SELECT c_image FROM Comments WHERE ID = :id");
         $stmt->bindParam(':id', $id);
         $stmt->execute();
 

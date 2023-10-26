@@ -31,14 +31,21 @@
         echo '<p class="timestamp">' . $row['created_at'] . '</p>';
         echo '<div class="rating">';
         echo '<p class="likes-count"><a href="../tweet/like_tweet.php?tweets_id=' . $row['ID'] . '"><i class="fa-solid fa-arrow-up" style="color: #2a511f;"></i></a></p>';
+        $tweetID = $row['ID'];
         
 
        
 
-        $comments_difference = $row['likes_count'] - $row['retweets_count'];
-        echo '<p class="comments-count">' . $comments_difference . '</p>';
-        echo '<p class="retweets-count"><a href="../tweet/retweet_tweet.php?tweets_id=' . $row['ID'] . '"><i class="fa-solid fa-arrow-down" style="color: #df2a2a;"></i></a></p></div>';
-
+        $likes_difference = $row['likes_count'] - $row['dislikes_count'];
+        echo '<p class="likes-count">' . $likes_difference . '</p>';
+        echo '<p class="dislikes-count"><a href="../tweet/dislike_tweet.php?tweets_id=' . $row['ID'] . '"><i class="fa-solid fa-arrow-down" style="color: #df2a2a;"></i></a></p>';
+include_once("../tweet/comment_tweet.php");
+$commentCount = Comments_count($tweetID,$db);
+if ($commentCount >= 0) {
+    echo '<i class="fa-regular fa-comment"></i>' . $commentCount .'</div>';
+} else {
+    echo "Une erreur s'est produite lors du comptage des commentaires.";
+}
         // Formulaire pour ajouter un commentaire
 include('../tweet/comments.php');
         

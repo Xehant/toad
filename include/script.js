@@ -18,11 +18,25 @@ closePopup.addEventListener('click', () => {
 const nightModeToggle = document.getElementById('night-mode-toggle');
 const body = document.body;
 
-nightModeToggle.addEventListener('click', () => {
+/*nightModeToggle.addEventListener('click', () => {
     body.classList.toggle('night-mode');
-});
-nightModeToggle.addEventListener('click', () => {
+});*/
+
+const nightModeStylesheet = document.getElementById('night-mode-stylesheet');
+
+nightModeToggle.addEventListener('change', () => {
     body.classList.toggle('night-mode');
-    const nightModeStylesheet = document.getElementById('night-mode-stylesheet');
     nightModeStylesheet.disabled = !nightModeStylesheet.disabled;
 });
+
+function showCategory(categoryName) {
+    // Masquez toutes les catégories
+    const categories = document.querySelectorAll('.category');
+    categories.forEach(category => category.style.display = 'none');
+    
+    // Affichez la catégorie sélectionnée
+    const categoryToShow = document.getElementById(categoryName);
+    if (categoryToShow) {
+        categoryToShow.style.display = 'block';
+    }
+}
