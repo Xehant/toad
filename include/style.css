@@ -6,7 +6,7 @@ body {
 
 
 fieldset{
-    
+    display: flex;
     margin-top: 2em;
     border: 1px solid green;
 border-radius: 10%;
@@ -59,18 +59,7 @@ img{
     float: left;
     max-width: 100px;
 }
-fieldset{
-    
-    margin-top: 2em;
-    border: 1px solid green;
-border-radius: 10%;
-    max-width: 300px;
-    padding: 3em;
-    font-size: 1em;
-    color:white;
-    background-color: green;
-    text-align: center;
-}
+
 fieldset label, fieldset input{
     margin: auto;
     font-size: 2em;
@@ -288,7 +277,7 @@ aside {
 .aside-links a {
     color: white;
     padding: 20px; /* Espacement interne */
-    font-size: 30px;
+    font-size: 20px;
     text-decoration: none;
     width: 100%;
     box-sizing: border-box;
@@ -320,4 +309,27 @@ aside {
 }
 .profil img{
     border-radius:50% ;
+}
+.twitter-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+   display: flex;
+    justify-content: space-between;margin-right: 10px;
+    /*background-color: black;*/
+    font-size: 30px;
+}
+
+.nav-item {
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+
+     /* Ajustez cette valeur pour l'espacement horizontal */
+}
+
+.nav-item:hover {
+    border-color: #1DA1F2; /* Couleur bleue de Twitter */
 }

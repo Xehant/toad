@@ -38,8 +38,9 @@ if (isset($_POST['tweet_text'])) {
         }
 
         // Insérer le tweet dans la base de données avec le texte et l'image (peut être NULL)
-        $query = "INSERT INTO Tweets (User_nom, User_photo, texte, tweet_image, created_at) VALUES (:user_name, :user_photo, :tweet_text, :tweet_image, NOW())";
+        $query = "INSERT INTO Tweets (User_ID,User_nom, User_photo, texte, tweet_image, created_at) VALUES (:user_id, :user_name, :user_photo, :tweet_text, :tweet_image, NOW())";
         $stmt = $db->prepare($query);
+        $stmt->bindParam(':user_id', $user_id);
         $stmt->bindParam(':user_name', $user_name);
         $stmt->bindParam(':tweet_text', $tweet_text);
         $stmt->bindParam(':user_photo', $user_photo);
