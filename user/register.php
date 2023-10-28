@@ -18,28 +18,27 @@ $champ ="<div class='form-group'><label>Parrain</label><input type='text 'class=
         <?php if(isset($champ)): ?>
             <?= $champ;?>
             <?php endif;?>
+            <div class="form-group">
+    <label for="nom">Pseudo</label>
+    <input type="text" name="nom" id="nom" class="form-control">
+</div>
+<div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" class="form-control">
+</div>
+<div class="form-group">
+    <label for="mdp">Mot de passe</label>
+    <input type="password" name="mdp" id="mdp" class="form-control">
+</div>
+<div class="form-group">
+    <label for="rmdp">Confirmer mot de passe</label>
+    <input type="password" name="rmdp" id="rmdp" class="form-control">
+</div>
+<div class="form-group">
+    <input type="submit" class="submit" name="inscrire" value="S'inscrire">
+</div>
 
-        <div class=from-group>
-            <label for="nom">Pseudo</label>
-            <input type="text" name="nom" id="nom" class="form-control">
-            </div>
-            <div class=from-group>
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" class="form-control">
-            </div>
-            <div class=from-group>
-            <label for="mdp">Mot de passe</label>
-            <input type="password" name="mdp" id="mdp" class="form-control">
-            </div>
-            <div class=from-group>
-            <label for="rmdp">Confirmer mot de passe</label>
-            <input type="password" name="rmdp" id="rmdp" class="form-control">
-            </div>
-            <div class=from-group>
-            <input type="submit" class="submit" name="inscrire" value="S'inscrire">
-            </div>
-        </div>
-        <p class="log">Déjà inscrit? <a href="login.php">connectez-vous</a></p>
+        <h2 class="log">Déjà inscrit? <a href="login.php">connectez-vous</a></h2>
     </form>
         </fieldset>
-        <?php include("../include/footer.php");?>
+<?php include("../include/footer.php");?>
