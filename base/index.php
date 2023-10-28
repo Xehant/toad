@@ -32,10 +32,6 @@
         echo '<div class="rating">';
         echo '<p class="likes-count"><a href="../tweet/like_tweet.php?tweets_id=' . $row['ID'] . '"><i class="fa-solid fa-arrow-up" style="color: #2a511f;"></i></a></p>';
         $tweetID = $row['ID'];
-        
-
-       
-
         $likes_difference = $row['likes_count'] - $row['dislikes_count'];
         echo '<p class="likes-count">' . $likes_difference . '</p>';
         echo '<p class="dislikes-count"><a href="../tweet/dislike_tweet.php?tweets_id=' . $row['ID'] . '"><i class="fa-solid fa-arrow-down" style="color: #df2a2a;"></i></a></p>';

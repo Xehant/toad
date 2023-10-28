@@ -20,5 +20,4 @@ include '../user/verif_login.php';?>
         </div>
 </form>
 </fieldset>
-</body>  
-</html>
+<?php include("../include/footer.php");?>

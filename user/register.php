@@ -42,6 +42,4 @@ $champ ="<div class='form-group'><label>Parrain</label><input type='text 'class=
         <p class="log">Déjà inscrit? <a href="login.php">connectez-vous</a></p>
     </form>
         </fieldset>
-    
-</body>
-</html>
+        <?php include("../include/footer.php");?>

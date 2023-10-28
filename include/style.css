@@ -5,33 +5,34 @@ body {
 
 
 
-fieldset{
-    display: flex;
-    margin-top: 2em;
+
+  fieldset {
+    z-index: 1;
+margin: auto;
     border: 1px solid green;
-border-radius: 10%;
+    border-radius: 10%;
     max-width: 300px;
     padding: 3em;
     font-size: 1em;
-    color:white;
+    color: #f5f5f5;
     background-color: green;
     text-align: center;
 }
-fieldset label, fieldset input{
+
+fieldset label, fieldset input {
     margin: auto;
     font-size: 2em;
-    color:white;
+    color: #f5f5f5;
     background-color: green;
-   
 }
-fieldset .submit:hover{
-    background-color: white;
+fieldset .submit:hover {
+    background-color: #f5f5f5;
     color: green;
     border: none;
 }
-fieldset h2{
-font-size: 2em;
-color: white;
+fieldset h2 {
+    font-size: 2em;
+    color: #f5f5f5;
 }
 .form-group{
     padding: 1em;
@@ -43,7 +44,7 @@ body {
   }
 header div{
     background-color: green;
-    color:white;
+    color:#f5f5f5;
     height: 150px;
     margin-top: -20px;
 }
@@ -51,7 +52,7 @@ header ul{
     text-decoration: none;
     display: flex;
     justify-content: space-between;
-    color: white;
+    color: #f5f5f5;
     font-size: 1em;
     
 }
@@ -63,83 +64,87 @@ img{
 fieldset label, fieldset input{
     margin: auto;
     font-size: 2em;
-    color:white;
+    color:#f5f5f5;
     background-color: green;
    
 }
 fieldset .submit:hover{
-    background-color: white;
+    background-color: #f5f5f5;
     color: green;
     border: none;
 }
 fieldset h2{
 font-size: 2em;
-color: white;
+color: #f5f5f5;
 }
 .form-group{
     padding: 1em;
     margin:top 0.5em;
 }
 /* Style général pour les tweets */
+/* Style for the tweet */
 .tweet {
-    background-color: white;
+    background-color: #f5f5f5;
     border: 1px solid green;
     border-radius: 10px;
     padding: 15px;
     margin: 15px;
-    max-width: 400px; /* Ajustez selon vos préférences */
-    margin: 0 auto;
+    max-width: 400px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
 }
-
-/* Style pour le nom de l'utilisateur */
+.tweet-form {
+    max-width: 90%; /* Ensure the form doesn't exceed tweet width */
+}
 .tweet strong {
     font-weight: bold;
     font-size: 18px;
-    color: #333; /* Couleur du texte du nom */
+    color: #333;
 }
 
-/* Style pour le texte du tweet */
 .tweet .tweet_text {
     font-size: 16px;
-    color: #333; /* Couleur du texte du tweet */
+    color: #333;
 }
 
-/* Style pour la photo de profil de l'utilisateur */
+.tweet .tweet-image {
+    max-width: 100%; /* Ensure image doesn't overflow */
+    max-height: auto; /* Preserve aspect ratio */
+}
 
-
-/* Style pour la date de publication */
 .tweet .timestamp {
-    color: #657786;
+    color: green;
     font-size: 12px;
 }
 
-/* Style pour les icônes de notation (likes, retweets, etc.) */
 .tweet .rating {
     display: flex;
     justify-content: space-between;
     font-size: 16px;
+    align-items: center;
+    width: 90%;
 }
 
-/* Style pour le lien "Voir les détails" */
-.tweet a {
-    color: #1DA1F2; /* Couleur du lien */
-    text-decoration: none;
+.tweet .rating i {
+    margin-right: 5px;
 }
-
-/* Style au survol du lien "Voir les détails" */
-.tweet a:hover {
-    text-decoration: underline; /* Soulignement au survol */
+.tweet .tweet_text a,
+.tweet .timestamp a {
+    text-decoration: none; /* Remove underlines from specific links if needed */
 }
-
+.tweet .tweet_text,
+.tweet .timestamp {
+    text-decoration: none; /* Remove underlines from "a" elements */
+}
 .rating{
-    display: inline-flex;
+    display: inline-block;
+    border-top: grey ;
     justify-content: space-around;
 }
-.comment{
+.comment {
     margin: 1em;
-    border-bottom: 1px #657786;
+    border-bottom: 1px solid #ccc;
 }
 
 .publication {
@@ -149,11 +154,11 @@ color: white;
     display: none;
 }
 .log{
-    color: white;
+    color: #f5f5f5;
     text-decoration: none;
 }
 ul.menu li {
-    color: white;         /* Couleur du texte */
+    color: #f5f5f5;         /* Couleur du texte */
     list-style-type: none; /* Supprimer le point */
     text-decoration: none; /* Supprimer le soulignement */
     font-size: 1em;        /* Taille du texte */
@@ -171,13 +176,13 @@ ul.menu li {
  .submit{
     margin: auto;
     font-size: 2em;   
-    background-color: white;
+    background-color: #f5f5f5;
     color: green;
     border: none;
    
 }
 .submit:hover{
- color:white;
+ color:#f5f5f5;
     background-color: green;
     border: none;
 }
@@ -187,7 +192,7 @@ input[type="text"] {
     border: 1px solid green; /* Couleur verte */
     border-radius: 5px;
     font-size: 16px;
-    width: 100%;
+    width: 90%;
     box-shadow: none;
     transition: border-color 0.3s;
 }
@@ -230,11 +235,11 @@ input[type="text"].valid {
     display: none;
 }
 .log{
-    color: white;
+    color: #f5f5f5;
     text-decoration: none;
 }
 ul.menu li {
-    color: white;         /* Couleur du texte */
+    color: #f5f5f5;         /* Couleur du texte */
     list-style-type: none; /* Supprimer le point */
     text-decoration: none; /* Supprimer le soulignement */
     font-size: 1em;        /* Taille du texte */
@@ -252,18 +257,19 @@ ul.menu li {
  .submit{
     margin: auto;
     font-size: 2em;   
-    background-color: white;
+    background-color: #f5f5f5;
     color: green;
     border: none;
    
 }
 .submit:hover{
- color:white;
+ color:#f5f5f5;
     background-color: green;
     border: none;
 }
 /* Style pour la barre latérale (aside) */
 aside {
+    z-index: 0;
     width: 275px;
     background-color: green;
     position: fixed;
@@ -275,9 +281,9 @@ aside {
 }
 
 .aside-links a {
-    color: white;
-    padding: 20px; /* Espacement interne */
-    font-size: 20px;
+    color: #f5f5f5;
+    padding: 30px; /* Espacement interne */
+    font-size: 30px;
     text-decoration: none;
     width: 100%;
     box-sizing: border-box;
@@ -288,11 +294,11 @@ aside {
 
 .aside-links a.active {
     background-color: #04AA6D;
-    color: white;
+    color: #f5f5f5;
 }
 
 .aside-links a:hover:not(.active) {
-    background-color: white;
+    background-color: #f5f5f5;
     color: green;
 }
 
@@ -322,7 +328,7 @@ aside {
 
 .nav-item {
     cursor: pointer;
-    color: white;
+    color: #f5f5f5;
     padding: 10px 15px;
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s;
