@@ -332,6 +332,9 @@ aside {
 .twitter-nav li{
     margin: 20px;
 }
+.twitter-nav li:hover{
+     color:green;
+}
 .nav-item {
     cursor: pointer;
     color: #f5f5f5;

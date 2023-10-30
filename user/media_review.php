@@ -23,15 +23,14 @@ if (count($results3) > 0) {
         echo '<img src="' . $imageSrc . '" alt="Photo de profil" class="profil">';
         echo '<p><strong>     @' . $media['User_nom'] . '</strong></p>';
         echo "<a href='../tweet/details_tweet.php?tweet_id=" . $media['ID'] . "'><p class='tweet_text'>" . $media['texte'] . "</p>";
-
-        echo '<p class="timestamp">' . $media['created_at'] . '</p>';
-        echo '<div class "rating">';
-        echo '<p class="likes-count"><a href="../tweet/like_tweet.php?tweets_id=' . $media['ID'] . '"><i class="fa-solid fa-arrow-up" style="color: #2a511f;"></i></a></p>';
-        $tweetID = $media['ID'];
         include '../tweet/image_tweet.php';
         if (!empty($media['tweet_image'])) {
             echo '<img src="data:image/jpeg;base64,' . base64_encode($media['tweet_image']) . '" alt="Image du tweet"></a>';
         }
+        echo '<p class="timestamp">' . $media['created_at'] . '</p>';
+        echo '<div class="rating">';
+        echo '<p class="likes-count"><a href="../tweet/like_tweet.php?tweets_id=' . $media['ID'] . '"><i class="fa-solid fa-arrow-up" style="color: #2a511f;"></i></a></p>';
+        $tweetID = $media['ID'];
         $likes_difference = $media['likes_count'] - $media['dislikes_count'];
         echo '<p class="likes-count">' . $likes_difference . '</p>';
         echo '<p class="dislikes-count"><a href="../tweet/dislike_tweet.php?tweets_id=' . $media['ID'] . '"><i class="fa-solid fa-arrow-down" style="color: #df2a2a;"></i></a></p>';

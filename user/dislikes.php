@@ -27,15 +27,16 @@ if (count($likedTweets) > 0) {
         echo '<img src="' . $imageSrc . '" alt="Photo de profil" class="profil">';
         echo '<p><strong>@' . $likes['User_nom'] . '</strong></p>';
         echo "<a href='../tweet/details_tweet.php?tweet_id=" . $likes['ID'] . "'><p class='tweet_text'>" . $likes['texte'] . "</p>";
-        echo '<p class="timestamp">' . $likes['created_at'] . '</p>';
-        echo '<div class="rating">';
-        echo '<p class="likes-count"><a href="../tweet/like_tweet.php?tweets_id=' . $likes['ID'] . '"><i class="fa-solid fa-arrow-up" style="color: #2a511f;"></i></a></p>';
-        $tweetID2 = $likes['ID'];
-        include_once('../tweet/image_tweet.php');
+            include_once('../tweet/image_tweet.php');
         if (!empty($likes['c_image'])) {
             $imagetweet2 = $likes['c_image'];
             echo '<img src="data:image/jpeg;base64,' . base64_encode($imagetweet2) . '" alt="Image de la réponse"></a>';
         }
+        echo '<p class="timestamp">' . $likes['created_at'] . '</p>';
+        echo '<div class="rating">';
+        echo '<p class="likes-count"><a href="../tweet/like_tweet.php?tweets_id=' . $likes['ID'] . '"><i class="fa-solid fa-arrow-up" style="color: #2a511f;"></i></a></p>';
+        $tweetID2 = $likes['ID'];
+   
         $likes_difference2 = $likes['likes_count'] - $likes['dislikes_count'];
         echo '<p class="likes-count">' . $likes_difference2 . '</p>';
         echo '<p class="dislikes-count"><a href="../tweet/dislike_tweet.php?tweets_id=' . $likes['ID'] . '"><i class="fa-solid fa-arrow-down" style="color: #df2a2a;"></i></a></p>';

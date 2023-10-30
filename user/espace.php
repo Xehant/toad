@@ -38,11 +38,7 @@ include "../include/header.php";
 
       <div class="category" id="profil">
          <!-- Contenu de la catégorie "Tous les Tweets" --> <!-- Déplacez le formulaire d'ajout de publication ici -->
-   <form action="upload.php" method="post" enctype="multipart/form-data">
-      Modifier ma photo de profil:
-      <input type="file" name="image" />
-      <input type="submit" name="submit" value="UPLOAD" class="submit" />
-   </form>
+
    <h1>Mise à jour de la description de l'utilisateur</h1>
     <form action="../user/description.php" method="POST">
         <label for="description">Nouvelle description :</label><br>
@@ -74,8 +70,12 @@ include "../include/header.php";
 
 ?>
 
-         <?php include ('../user/view.php'); ?>
-        
+       
+         <form action="upload.php" method="post" enctype="multipart/form-data">
+     <h2>Modifier ma photo de profil:</h2> 
+        <?php include ('../user/view.php'); ?><input type="file" name="image" />
+      <input type="submit" name="submit" value="UPLOAD" class="submit" />
+   </form>  
       </div>
       <div class="category" id="tweets">
          <!-- Contenu de la catégorie "Tweets" -->
