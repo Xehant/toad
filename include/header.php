@@ -20,8 +20,8 @@
         <ul class="menu">
             <!-- Liens de navigation dans la barre latérale -->
           
-            <li><a href="../base/index.php"><i class="fa-light fa-house"></i>Accueil</a></li>
-            <li><a href="../user/login.php">Connexion</a></li>
+            <li><a href="../base/index.php"><i class="fa-solid fa-house"></i></i>Accueil</a></li>
+            <li><a href="../user/login.php"><i class="fa-solid fa-user" style="color: #f5f5f5;"></i>Connexion</a></li>
             <li><a href="../user/register.php">Inscription</a></li>
             <li><a id="night-mode-toggle"><i class="fa-light fa-cloud-moon" style="color: #20511f;"></i>Mode nuit</a></li>
             </ul> 

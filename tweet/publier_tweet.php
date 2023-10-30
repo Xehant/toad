@@ -53,8 +53,8 @@ if (isset($_POST['tweet_text'])) {
         } else {
             echo "Une erreur est survenue lors de la publication du tweet.";
         }
-    } else {
-        echo "Utilisateur introuvable.";
+    } else { header("Location:../base/index.php");
+        
     }
 } else {
     header("Location:../base/index.php");

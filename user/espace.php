@@ -20,7 +20,7 @@ include "../include/header.php";
 
 <div class="container">
    <h1>MON ESPACE</h1>
-   <h2>Modifier mon profil</h2>
+   
 
    <form action="logout" method="get">
       <a href="logout.php">Se déconnecter</a>
@@ -28,21 +28,54 @@ include "../include/header.php";
   
    <div class="card-body">
       <ul class="twitter-nav">
-         <li onclick="showCategory('all')">Modifier mon profil</li>
+         <li onclick="showCategory('profil')">Modifier mon profil</li>
          <li onclick="showCategory('tweets')">Tweets</li>
          <li onclick="showCategory('replies')">Réponses</li>
          <li onclick="showCategory('media')">Média</li>
-         <li onclick="showCategory('likes')">Tweets Likés</li>
+         <li onclick="showCategory('likes')"> Likés</li>
+         <li onclick="showCategory('dislikes')"> Dislikés</li>
       </ul>
 
-      <div class="category" id="all">
+      <div class="category" id="profil">
          <!-- Contenu de la catégorie "Tous les Tweets" --> <!-- Déplacez le formulaire d'ajout de publication ici -->
    <form action="upload.php" method="post" enctype="multipart/form-data">
-      Select image to upload:
+      Modifier ma photo de profil:
       <input type="file" name="image" />
       <input type="submit" name="submit" value="UPLOAD" class="submit" />
    </form>
+   <h1>Mise à jour de la description de l'utilisateur</h1>
+    <form action="../user/description.php" method="POST">
+        <label for="description">Nouvelle description :</label><br>
+        <textarea name="description" id="description" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Mettre à jour la description">
+    </form><?php
+// Assurez-vous d'appeler session_start() au début du fichier
+
+
+ include ('../user/description.php'); 
+    $query = "SELECT description FROM user WHERE id = :id";
+    $stmt = $db->prepare($query);
+    $stmt->bindParam(':id', $user_id);
+    $stmt->execute();
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($user) {
+        // Vérifiez si l'utilisateur a une description
+        $description = $user["description"];
+        if (!empty($description)) {
+            echo "<h2>Description de l'utilisateur :</h2>";
+            echo "<p>$description</p>";
+        } else {
+            echo "<p>L'utilisateur n'a pas encore de description.</p>";
+        }
+    } else {
+        echo "Utilisateur introuvable.";
+    }
+
+?>
+
          <?php include ('../user/view.php'); ?>
+        
       </div>
       <div class="category" id="tweets">
          <!-- Contenu de la catégorie "Tweets" -->
@@ -63,7 +96,10 @@ include "../include/header.php";
          <!-- Contenu de la catégorie "Tweets Likés" -->
          <?php include('../user/likes.php'); ?>
       </div>
-      <p><a href="" class="btn btn-danger">Je partage mon lien via Google</a></p>
+      <div class="category" id="dislikes">
+         <!-- Contenu de la catégorie "Tweets Likés" -->
+         <?php include('../user/dislikes.php'); ?>
+      </div>
    </div>
 </div>
 

@@ -23,6 +23,6 @@ if (isset($_SESSION["id"])) {
         echo 'ID est vide...';
     }
 } else {
-    echo 'ID n\'est pas défini...';
+    
 }
 ?>

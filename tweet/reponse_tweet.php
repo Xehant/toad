@@ -57,7 +57,7 @@ if (isset($_POST['tweets_id'], $_POST['reponse_tweet'])) {
             echo "Une erreur est survenue lors de l'ajout du commentaire.";
         }
     } else {
-        echo "Utilisateur introuvable.";
+        header("Location:../base/index.php");
     }
 } else {
     echo "Le tweet n'est pas trouvé.";

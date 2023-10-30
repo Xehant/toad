@@ -174,15 +174,8 @@ ul.menu li {
     padding: 1em;
     color: green;
 }
- .submit{
-    margin: auto;
-    font-size: 2em;   
-    background-color: #f5f5f5;
-    color: green;
-    border: none;
-   
-}
-.submit:hover{
+
+input[type="submit"]:hover{
  color:#f5f5f5;
     background-color: green;
     border: none;
@@ -198,7 +191,11 @@ input[type="text"], input[type="password"] {
     transition: border-color 0.3s;
 }
 input[type="submit"]{
-border-radius: 5%;
+border-radius: 5%;margin: auto;
+    font-size: 2em;   
+    background-color: #f5f5f5;
+    color: green;
+    border: none;
 }
 .form-group input#rmdp, .form-group input#nom {
     background-color: #f5f5f5; 
@@ -325,14 +322,16 @@ aside {
 }
 .twitter-nav {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+
    display: flex;
-    justify-content: space-between;margin-right: 10px;
+    justify-content: space-between;
+    margin-right: 10px;
     /*background-color: black;*/
     font-size: 30px;
 }
-
+.twitter-nav li{
+    margin: 20px;
+}
 .nav-item {
     cursor: pointer;
     color: #f5f5f5;
